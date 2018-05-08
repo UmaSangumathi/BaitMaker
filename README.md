@@ -26,7 +26,7 @@ Output files:
 *-All_BAITS-mapped.csv: File contains the information on where the baits map to each of the genome sequence used. 
 *-All_BAITS-untargeted.csv: Untargeted region of the genome where the adjacent baits are in a distance of more than 500bp apart from each other. 
  
-Example:  qsub  RunGeneratebaits.py  ./Trial_1   ./Trial_1/Pathnrich_baits_HKU9-Bt22.fa   ./Trial_1/Nearest_hits_bt22.fa 
+
 -------------------------------------------------------------------------------------------------------- 
  
  
