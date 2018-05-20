@@ -1,4 +1,19 @@
 #!/usr/bin/python
+
+##############################################################
+#  Script     : RunGeneatebaits.py
+#  Author     : Uma sangumathi
+#  Date       : 26/10/2015
+#  Last Edited: 
+#  Description: Wrapper to Design all possible baits for the viral species and all strains
+##############################################################
+# Purpose: 
+# Iteratively design baits 
+# Requirements:
+#  cdhit
+# blast
+##############################################################
+
 import os
 import sys
 from Bio import SeqIO

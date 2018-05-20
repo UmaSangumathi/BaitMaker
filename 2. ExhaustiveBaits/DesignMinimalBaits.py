@@ -1,4 +1,24 @@
 #!/usr/bin/python
+
+##############################################################
+#  Script     : DesignMinimalBaitspy
+#  Author     : Uma sangumathi
+#  Date       : 26/10/2015
+#  Last Edited: 
+#  Description: functions to Design all possible baits for the viral species and all strains
+##############################################################
+# Purpose: 
+#  calculate the the bait melting temp and gc content
+#  create baits for every sequences
+#  remove overlapping baits within 500bp
+#  find untargeted regions
+#  redesign baits in untargeted regions 
+#  remove overlapping baits within 500bp
+# Requirements:
+#  cdhit 
+#  blast
+##############################################################
+
 import os
 import sys
 from Bio import SeqIO
