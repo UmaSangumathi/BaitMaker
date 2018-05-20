@@ -16,10 +16,12 @@ To Run:
 RunGeneratebaits.py  'Directory'  'Species Conserved baits fasta file'  'Query reference genomes in fasta' 
  
 Notes: 
-'Directory': is where the initial files required for the designing and the output files are written eg) /gpfs/research2/gmsusk/Customised_PathnRich/Trial_1 
-'Species Conserved baits fasta file': This should contain the previously designed baits from the Pathnrich panel (57000 baits for all viruses) in fasta format. This is to make sure that the Species consevered baits already designed are included. If this information is not available then please create a file with a random 120bp sequence from the virus of interest. Please make sure it ends with “.fa”.  Eg) Pathnrich_baits_HKU9-Bt22.fa  
-'Query reference genomes in fasta': This file is a fasta file with all the genome sequences for which the baits are designed. Please make sure it ends with “.fa”. 
-Each step generated a number of intermediate files and these are deleted in the final step at line no –> 440 – 450 in the CustomizedBaitsPanel.py. Hence if you have any other file with the following terms they will be deleted.  json , finalbaits, Optimized, Blast, blast, Redesign, txt , Untar 
+'Directory': the initial files required for the designing and the output files are written
+'Species Conserved baits fasta file': fasta file with designed conserved baits designed by option A. This is to make sure that the Species consevered baits already designed are included.
+'Query reference genomes in fasta': This file is a fasta file with all the genome sequences for which the baits are designed (.fa) 
+Each step generated a number of intermediate files and these are deleted in the final step 
+
+DesignMinimalBaits.py. Hence if you have any other file with the following terms they will be deleted.  json , finalbaits, Optimized, Blast, blast, Redesign, txt , Untar 
 Output files:  
 *-All_BAITS.fa: Fasta file with all the baits sequences 
 *-All_BAITS-mapped.csv: File contains the information on where the baits map to each of the genome sequence used. 
