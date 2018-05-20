@@ -71,39 +71,39 @@ Usage: EnrichmentPipeline.py [options]
 Example: ./EnrichmentPipeline.py -r `pwd`/Reference -q `pwd`/Fastq -e gmail.com -d /share/ncbi/nt -o `pwd`/Test -i `pwd`/run_summary-tmp.csv -p F -s F -b `pwd` -t stringent   
  
 Options: 
-  -h, --help            show this help message and exit 
-  -r REF_DIR, --refdir=REF_DIR 
-                        Directory of Reference fasta file 
-  -q FQ_DIR, --fastq_dir=FQ_DIR 
-                        Directory of Fastq files 
-  -e EM, --email_address=EM 
-                        Email address to access online NCBI 
-  -d DB, --database=DB  NCBI nt database 
-  -o OUT_DIR, --outdir=OUT_DIR 
-                        Output directory 
-  -i CSV_FILE, --info=CSV_FILE 
-                        csv file containing the sample and reference information 
- -p PAR, --parallel=PAR 
-                        Run each fastq file in the info file in Parallel or not. Takes T or F 
--s SEG, --segment_type=SEG 
-                        Virus in the info file in Segmented or not. Takes T or F 
--b CODE_DIR, --code_dir=CODE_DIR 
-                        The directory were the scripts are present 
- -t PARAM, --stringency=PARAM 
-                        Stringency for the consensus genome generation: Takes 
-                        value 'stringent' or 'lenient'. stringent = MIN_COV 10 
-                        and Mismatches bwa defualt; lenient = minimum coverage 
-                        1 and 20bp mismatch 
+  -h, --help            show this help message and exit   
+  -r REF_DIR, --refdir=REF_DIR   
+                        Directory of Reference fasta file   
+  -q FQ_DIR, --fastq_dir=FQ_DIR  
+                        Directory of Fastq files  
+  -e EM, --email_address=EM  
+                        Email address to access online NCBI  
+  -d DB, --database=DB  NCBI nt database  
+  -o OUT_DIR, --outdir=OUT_DIR  
+                        Output directory  
+  -i CSV_FILE, --info=CSV_FILE  
+                        csv file containing the sample and reference information  
+ -p PAR, --parallel=PAR  
+                        Run each fastq file in the info file in Parallel or not. Takes T or F  
+-s SEG, --segment_type=SEG  
+                        Virus in the info file in Segmented or not. Takes T or F  
+-b CODE_DIR, --code_dir=CODE_DIR  
+                        The directory were the scripts are present  
+ -t PARAM, --stringency=PARAM  
+                        Stringency for the consensus genome generation: Takes  
+                        value 'stringent' or 'lenient'. stringent = MIN_COV 10  
+                        and Mismatches bwa defualt; lenient = minimum coverage  
+                        1 and 20bp mismatch  
  
-Output: 
-The pipeline outputs, 
-i) Consensus genome generated: *-hybrid.fa and *-hybrid.annot 
-ii) SNPs found: *.vcf   
-iii) Mapped bam file: *-sort.bam  
-iv) Per position coverage: *.cov  
+Output:  
+The pipeline outputs,  
+i) Consensus genome generated: *-hybrid.fa and *-hybrid.annot  
+ii) SNPs found: *.vcf    
+iii) Mapped bam file: *-sort.bam   
+iv) Per position coverage: *.cov   
  
  
-III) Generate graphs  
+III) Generate graphs   
 runGraphs.py is the wrapper script that calls generated_circosPlot.py (to generate the graph) and bait_effiency_modules.py (For plotting the baits position)  
  
 Files required for Graph..   
