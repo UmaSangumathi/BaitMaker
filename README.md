@@ -1,17 +1,16 @@
-# PathNrich_V2
+# PathNrich
 updated : aug 2015
  
-A) Conserved baits: 
-runVirusDNA_NS.py = Main wrapper script that calls different functions to design conserved baits
+# Design baits targetting the genome for enrichment(120bp)  
+**A) Conserved baits: 
 
+runVirusDNA_NS.py = Main wrapper script that calls different functions to design conserved baits
  
-B) Exhaustive baits: 
+**B) Exhaustive baits: 
  
 Scripts: 
 RunGeneratebaits.py  = Main wrapper script that calls different functions to design optimal number of baits for the given set of sequences. 
 DesignMinimalBaits.py = Contains the functions to design baits 
- 
-These scripts are written in python2.6 and it runs stable in the cluster (Not tested on the ubuntu servers). The script contains absolute paths to software within, so check them if any error msgs appear.  
  
 To Run: 
 RunGeneratebaits.py  'Directory'  'Species Conserved baits fasta file'  'Query reference genomes in fasta' 
@@ -28,11 +27,7 @@ Output files:
  
 
 -------------------------------------------------------------------------------------------------------- 
- 
- 
-C) Analysis Pipeline  
-Analysis pipeline for Illumina pair-end reads: 
- 
+**C) Analysis Pipeline  
  
 Procedure to run Enrichment Analysis Pipeline: 
  
@@ -71,7 +66,7 @@ where, CD-Lib-0004_S4_L001_R1_001_val_1.fq is the forward read fastq file presen
 For parallel run, for every fastq file in the csv file a ‘screen’ is created and the pipeline is run. You can check the jobs running by screen -ls command. 
  
 Usage: EnrichmentPipeline.py [options] 
-Example: ./EnrichmentPipeline.py -r `pwd`/Reference -q `pwd`/Fastq -e umasang7@gmail.com -d /share/ncbi/nt -o `pwd`/Test -i `pwd`/run_summary-tmp.csv -p F -s F -b `pwd` -t stringent 
+Example: ./EnrichmentPipeline.py -r `pwd`/Reference -q `pwd`/Fastq -e gmail.com -d /share/ncbi/nt -o `pwd`/Test -i `pwd`/run_summary-tmp.csv -p F -s F -b `pwd` -t stringent 
  
 Options: 
   -h, --help            show this help message and exit 
@@ -107,8 +102,6 @@ iv) Per position coverage: *.cov
  
  
 III) Generate graphs 
-**** This script is not packaged. Hence please edit the parameters and values within the script. For graph generation Circos software is used. 
- 
 runGraphs.py is the wrapper script that calls generated_circosPlot.py (to generate the graph) and bait_effiency_modules.py (For plotting the baits position) 
  
 Files required for Graph.. 
@@ -122,6 +115,6 @@ Software related:
 Copy all the *.conf files from the ./bin folder to this directory. The “hist.conf” is the configuration file for the layers in the plot (e.g. Coverage layer, baits layer, snps layer etc..), change the display parameters in this if needed. ideogram.conf gives the config for the outer genome display. 
 Copy the log_axis.txt from the ./bin folder and edit it accordingly. By default the log axis is marked from 10^1 to 10^5. The changes for this is also in the hist.conf 
  
-**** Please make sure the consensus genome fasta file headers should be used as the genome or segment name in the graph related files (e.g. Rotv-CU938.coords). 
+* Please make sure the consensus genome fasta file headers should be used as the genome or segment name in the graph related files (e.g. Rotv-CU938.coords). 
  
- 
+**** These scripts are not packaged. Hence please edit the parameters and values within the script. 
