@@ -1,5 +1,5 @@
 # PathNrich
-updated : aug 2015
+updated : Dec 2015
  
 ## Design baits targetting the genome for enrichment (120bp)  
 ### A) Conserved baits: 
