@@ -2,11 +2,11 @@
 updated : aug 2015
  
 # Design baits targetting the genome for enrichment(120bp)  
-**A) Conserved baits: 
+***A) Conserved baits: 
 
 runVirusDNA_NS.py = Main wrapper script that calls different functions to design conserved baits
  
-**B) Exhaustive baits: 
+***B) Exhaustive baits: 
  
 Scripts: 
 RunGeneratebaits.py  = Main wrapper script that calls different functions to design optimal number of baits for the given set of sequences. 
@@ -27,7 +27,7 @@ Output files:
  
 
 -------------------------------------------------------------------------------------------------------- 
-**C) Analysis Pipeline  
+***C) Analysis Pipeline  
  
 Procedure to run Enrichment Analysis Pipeline: 
  
@@ -115,6 +115,6 @@ Software related:
 Copy all the *.conf files from the ./bin folder to this directory. The “hist.conf” is the configuration file for the layers in the plot (e.g. Coverage layer, baits layer, snps layer etc..), change the display parameters in this if needed. ideogram.conf gives the config for the outer genome display. 
 Copy the log_axis.txt from the ./bin folder and edit it accordingly. By default the log axis is marked from 10^1 to 10^5. The changes for this is also in the hist.conf 
  
-* Please make sure the consensus genome fasta file headers should be used as the genome or segment name in the graph related files (e.g. Rotv-CU938.coords). 
+consensus genome fasta file headers should be used as the genome or segment name in the graph related files (e.g. Rotv-CU938.coords). 
  
-**** These scripts are not packaged. Hence please edit the parameters and values within the script. 
+* ***These scripts are not packaged. Hence please edit the parameters and values within the script. 
