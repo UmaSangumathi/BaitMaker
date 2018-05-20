@@ -1,5 +1,31 @@
 #!/usr/bin/python
 
+##############################################################
+#  Script     : runVirusDNA_NS.py
+#  Author     : uma sangumathi
+#  Date       : 28/06/2013
+#  Last Edited: 
+#  Description: Wrapper script to find conserved viral regions and design 120mer bait 
+##############################################################
+# Purpose: 
+#  From the sqlite database get a set of sequences for the virus
+#  Find conserved kmers with Primux software  
+#  Assign a random reference from the sequences
+#  Map all the conserved kmers to the reference genome
+#  Remove overlapping and redundant kmers mapped with 500bp distance
+#  Finalize the confirmed conserved baits
+#  For regions not covered by the baits redesign variable baits specific to the reference genome  
+# Requirements:
+#  1. Primux   
+#  2. Vmatch
+#  3. NCBI blast commandline tool and database
+#  4. Sqlite 
+#  5. python functions from
+#        - GenomeBaitProcess_NS  
+#        - GetConsKmers_NS
+#        - BlastParser_NS
+#############################################################
+
 import sys
 import os
 import time

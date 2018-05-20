@@ -1,5 +1,22 @@
 #!/usr/bin/python
 
+##############################################################
+#  Script     : GenomeBaitProcess_NSpy
+#  Author     : uma sangumathi
+#  Date       : 28/06/2013
+#  Last Edited: 
+#  Description: design 120mer bait 
+##############################################################
+# Purpose: 
+#  calculate the the bait melting temp and gc content
+#  map the kmers to the reference genome
+#  remove overlapping baits within 500bp
+#  design coverage baits in untargeted regions 
+# Requirements:
+
+
+##############################################################
+
 # ----------- Global default values -------------
 
 TM_Min = 68

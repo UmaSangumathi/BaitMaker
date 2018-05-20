@@ -1,5 +1,20 @@
 #!/usr/bin/python
 
+##############################################################
+#  Script     : BlastParser_NSpy
+#  Author     : uma sangumathi
+#  Date       : 28/06/2013
+#  Last Edited: 
+#  Description: design 120mer bait 
+##############################################################
+# Purpose: 
+#  check if designed baits have any offtarget hits (human, mouse, bacteria)
+#  Blast NCBI
+#
+# Requirements:
+
+##############################################################
+
 import os
 import itertools
 

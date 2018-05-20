@@ -1,4 +1,22 @@
-#!/home/gmsusk/opt/bin/python2.6
+#!/usr/bin/python
+
+##############################################################
+#  Script     : NCBI_retreive_database.py
+#  Author     : Uma Sangumathi
+#  Date       : 28/06/2013
+#  Last Edited: 
+#  Description: Download sequences from NCBI for query viruses
+##############################################################
+# Purpose: 
+#  Search NCBI for '[ORGANISM] AND 1000:120000000[SLEN] NOT clone NOT vector'  # Virus and specific length
+#  Create sqlite3 database 
+#  Update the database  with hits
+# Requirements:
+#  1. NCBI blast commandline tool and database
+#  2. Sqlite 
+
+#############################################################
+
 
 import os
 import Bio
@@ -16,7 +34,7 @@ import sys
 import types
 
 
-Entrez.email = "umasang7@gmail.com"			#Log in
+Entrez.email = "tmp@gmail.com"			#Log in
 hm_dir = "/home/gmsusk/Project/Indentity_per_baits"
 con1 = None
 con1 = sqlite3.connect(hm_dir + '/db_VirusFiles/VirusCapture.db')

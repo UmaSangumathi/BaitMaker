@@ -1,12 +1,32 @@
 #!/usr/bin/python
 
+##############################################################
+#  Script     : GetConsKmers.py
+#  Author     : uma sangumathi
+#  Date       : 28/06/2013
+#  Last Edited: 
+#  Description: Wrapper script to find conserved viral regions and design 120mer bait 
+##############################################################
+# Purpose: 
+# Select diverse set of representative sequences from the database and make a fasta file
+# Reverse complement of the fasta sequences
+# Find conserved kmers using Primux software for different mismatches
+#  
+# Requirements:
+#  1. Primux   
+#  2. Vmatch
+#  3. NCBI blast commandline tool and database
+#  4. Sqlite 
+
+#############################################################
+
 
 # ------------- Set Default values and directory ------------
 def set_dir(wrk_dir, proj_dir, mismatch, vir_nam):
     import os
     global exec_dir, primux_dir
-   # primux_dir = wrk_dir + '/src/primux'
-    primux_di = "/home/rongli/src/primux_uma"
+    primux_dir = wrk_dir + '/src/primux'
+    #primux_di = "/home/rongli/src/primux_uma"
     exec_dir = proj_dir + '/' + vir_nam
     if not os.path.isdir(exec_dir):
         os.mkdir(exec_dir)
