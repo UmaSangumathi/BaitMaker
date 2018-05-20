@@ -1,8 +1,8 @@
 # PathNrich
 updated : aug 2015
  
-# Design baits targetting the genome for enrichment(120bp)  
-***A) Conserved baits: 
+# Design baits targetting the genome for enrichment (120bp)  
+## A) Conserved baits: 
 
 runVirusDNA_NS.py = Main wrapper script that calls different functions to design conserved baits
  
