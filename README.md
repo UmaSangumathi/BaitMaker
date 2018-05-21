@@ -4,12 +4,12 @@ updated : Dec 2015
 ## Design baits targetting the genome for enrichment (120bp)  
 ### A) Conserved baits: 
 
-runVirusDNA_NS.py = Main wrapper script that calls different functions to design conserved baits
+runVirusDNA_NS.py = Main wrapper script that calls different functions to design conserved baits  
 
-runVirusDNA_NS.py main_directory virus_name database_sequences_name bait_length coverage_distance disRC
-disRC = TRUE/FALSE "disable reverse complement function for '-'gRNA viruses"
+runVirusDNA_NS.py main_directory virus_name database_sequences_name bait_length coverage_distance disRC  
+disRC = TRUE/FALSE "disable reverse complement function for '-'gRNA viruses"  
 
-python runVirusDNA_NS.py dir dengue_virus virusDB 120 500 FALSE 
+python runVirusDNA_NS.py dir dengue_virus virusDB 120 500 FALSE  
 
 -------------------------------------------------------------------------------------------------------- 
 ### B) Exhaustive baits: 
