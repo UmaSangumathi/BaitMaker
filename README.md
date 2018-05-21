@@ -6,6 +6,11 @@ updated : Dec 2015
 
 runVirusDNA_NS.py = Main wrapper script that calls different functions to design conserved baits
 
+runVirusDNA_NS.py main_directory virus_name database_sequences_name bait_length coverage_distance disRC
+disRC = TRUE/FALSE "disable reverse complement function for '-'gRNA viruses"
+
+python runVirusDNA_NS.py dir dengue_virus virusDB 120 500 FALSE 
+
 -------------------------------------------------------------------------------------------------------- 
 ### B) Exhaustive baits: 
  
