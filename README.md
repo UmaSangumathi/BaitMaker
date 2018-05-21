@@ -5,7 +5,8 @@ updated : Dec 2015
 ### A) Conserved baits: 
 
 runVirusDNA_NS.py = Main wrapper script that calls different functions to design conserved baits
- 
+
+-------------------------------------------------------------------------------------------------------- 
 ### B) Exhaustive baits: 
  
 Scripts:   
