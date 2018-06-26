@@ -1,4 +1,4 @@
-# PathNrich
+# BaitMaker
 updated : Dec 2015
  
 ## Design baits targetting the genome for enrichment (120bp)  
