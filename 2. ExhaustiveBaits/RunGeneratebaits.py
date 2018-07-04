@@ -115,7 +115,7 @@ if len(sys.argv) == 4:
 
 # Remove unnecessary files
   for todel in glob.glob('*tmp*'): os.remove(todel)
-  for todel in glob.glob('*iter*'): os.remove(todel)
+  #for todel in glob.glob('*iter*'): os.remove(todel)
 
   print "Completed on ", time.strftime("%c")
 else:
