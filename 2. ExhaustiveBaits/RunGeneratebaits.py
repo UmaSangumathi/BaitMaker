@@ -10,7 +10,7 @@
 # Purpose: 
 # Iteratively design baits 
 # Requirements:
-#  cdhit
+# CD-HIT
 # blast
 ##############################################################
 
@@ -114,8 +114,8 @@ if len(sys.argv) == 4:
     untar_reg = genomesUntargeted(untar_csv, ref, "iter-3_untargeted_portion.fa")
 
 # Remove unnecessary files
- # for todel in glob.glob('*tmp*'): os.remove(todel)
- # for todel in glob.glob('*iter*'): os.remove(todel)
+  for todel in glob.glob('*tmp*'): os.remove(todel)
+  for todel in glob.glob('*iter*'): os.remove(todel)
 
   print "Completed on ", time.strftime("%c")
 else:
