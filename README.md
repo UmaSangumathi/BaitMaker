@@ -32,7 +32,7 @@ RunGeneratebaits.py  workingdir virus_baits.fa  virus_NCBI.fa
 
 Notes:   
 'Directory': the initial files required for the designing and the output files are written  
-'Species Conserved baits fasta file': fasta file with designed conserved baits designed by option A. This is to make sure that the Species   consevered baits already designed are included.  
+'Species Conserved baits fasta file': fasta file with designed conserved baits designed by option A. This is to make sure that the Species   consevered baits already designed are included. If conserved baits are not available, then just use an empty fasta file (.fa).   
 'Query reference genomes in fasta': This file is a fasta file with all the genome sequences for which the baits are designed (.fa)   
 
 Each step generated a number of intermediate files and these are deleted in the final step. 
