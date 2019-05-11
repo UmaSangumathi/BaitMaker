@@ -35,14 +35,15 @@ import types
 
 
 Entrez.email = "tmp@gmail.com"			#Log in
-hm_dir = "/home/gmsusk/Project/Indentity_per_baits"
+hm_dir = "./"
 con1 = None
-con1 = sqlite3.connect(hm_dir + '/db_VirusFiles/VirusCapture.db')
+con1 = sqlite3.connect(hm_dir + '/VirusCapture.db')
 curi = con1.cursor()
-#curi.execute("DROP TABLE IF EXISTS VirusData_4sp")
-#curi.execute("CREATE TABLE VirusData_4sp(Species TEXT, Unique_ID INT Primary KEY, Primary_accession TEXT, Sequence_length INT, Other_Seq_id TEXT, Taxonomy TEXT,Source TEXT,Molecular_type TEXT,Comment TEXT, Host TEXT, Strain TEXT, Collection_Date TEXT, dbRef TEXT, Isolate TEXT, Country TEXT, Journal TEXT, Title TEXT, Sequence TEXT )")
-#cur.execute("DROP TABLE IF EXISTS Hits")
-#cur.execute("CREATE TABLE Hits (Virus TEXT PRIMARY KEY, hitGrt1000 INT, hitsGrt100 INT, ReferenceGenome TEXT, UniqueID TEXT)")
+
+curi.execute("DROP TABLE IF EXISTS VirusData_4sp")
+curi.execute("CREATE TABLE VirusData_4sp(Species TEXT, Unique_ID INT Primary KEY, Primary_accession TEXT, Sequence_length INT, Other_Seq_id TEXT, Taxonomy TEXT,Source TEXT,Molecular_type TEXT,Comment TEXT, Host TEXT, Strain TEXT, Collection_Date TEXT, dbRef TEXT, Isolate TEXT, Country TEXT, Journal TEXT, Title TEXT, Sequence TEXT )")
+cur.execute("DROP TABLE IF EXISTS Hits")
+cur.execute("CREATE TABLE Hits (Virus TEXT PRIMARY KEY, hitGrt1000 INT, hitsGrt100 INT, ReferenceGenome TEXT, UniqueID TEXT)")
 
 
 """ Fn: Write into file! """
