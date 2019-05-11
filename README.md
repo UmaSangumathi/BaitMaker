@@ -7,7 +7,7 @@ updated : Dec 2015
 runVirusDNA_NS.py = Main wrapper script that calls different functions to design conserved baits  
 
 runVirusDNA_NS.py main_directory virus_name database_sequences_name bait_length coverage_distance disRC  
-disRC = TRUE/FALSE "disable reverse complement function for '-'gRNA viruses"  
+disRC = TRUE/FALSE "disable reverse complement function for '-ve'gRNA viruses"  
 
 python runVirusDNA_NS.py dir "Dengue virus 1" VirusCapture.db 120 500 FALSE  
 
@@ -23,7 +23,7 @@ VirusCapture.db is a precompiled database of virus sequences from NCBI for which
 ### B) Exhaustive baits: 
  
 Scripts:   
-RunGeneratebaits.py  = Main wrapper script that calls different functions to design optimal number of baits for the given set of sequences.  
+RunGeneratebaits.py  = Main wrapper script that calls different functions to design optimal number of reverse complement baits for the given set of sequences.  
 DesignMinimalBaits.py = Contains the functions to design baits   
  
 To Run:   
@@ -43,6 +43,11 @@ The script tries to find baits targeting the sequences in 3 iterations. Usually 
 iter*.fa: Fasta file with all the baits sequences   
 iter*-mapped.csv: File contains the information on where the baits map to each of the genome sequence used.   
 iter*-untargeted.csv: Untargeted region of the genome where the adjacent baits are in a distance of more than 500bp apart from each other. 
+
+For -ve gRNA viruses, externally take reverse complement of the sequences before designing baits.   
+sudo apt-get install emboss
+revseq CCHFV.fasta -reverse -complement -outseq CCHFV_RC.fasta
+RunGeneratebaits.py  workingdir virus_baits.fa  CCHFV_RC.fasta
 
 ####  Requirements:
 1.  CD-HIT
@@ -85,7 +90,6 @@ CD-Lib-0005_S5_L001_R1_001_val_1.fq,Rotv-YR062.fa
  
 where, CD-Lib-0004_S4_L001_R1_001_val_1.fq is the forward read fastq file present in Fastq directory and Rotv-CU938.fa is the reference file with 11 segments in Reference directory. Please note that only the forward read fastq file should be given in the file, the code will find its pair by searching "R2" instead of R1.   
  
-For parallel run, for every fastq file in the csv file a ‘screen’ is created and the pipeline is run. You can check the jobs running by screen -ls command.   
  
 Usage: EnrichmentPipeline.py [options]   
 Example: ./EnrichmentPipeline.py -r `pwd`/Reference -q `pwd`/Fastq -e gmail.com -d /share/ncbi/nt -o `pwd`/Test -i `pwd`/run_summary-tmp.csv -p F -s F -b `pwd` -t stringent   
