@@ -38,12 +38,12 @@ dist = 500  # default 500
 bp_len = 120
 GC_limit = "20-80"
 TM_Min = 68
-TM_Max = 170
+TM_Max = 200
 utr_reg = 250
 bp_cov = dist
 bp_pos = (bp_cov/2) + (bp_len/2) - 1
 bp_neg = (bp_cov/2) - (bp_len/2)
-PERC_IND = 80  # default 90
+PERC_IND = 85  # default 90
 
 
 # ------- Thermodynamic oligonucleotide calculator --------
