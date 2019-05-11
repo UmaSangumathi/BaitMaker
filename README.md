@@ -17,7 +17,7 @@ python runVirusDNA_NS.py dir "Dengue virus 1" VirusCapture.db 120 500 FALSE
  3. NCBI blast commandline tool and database
  4. Sqlite python
 
-virusDB is a precompiled database of virus sequences from NCBI for which the baits are to be designed. Create the database using NCBI_retreive_database.py script. Change the directory path and database name accordingly.
+VirusCapture.db is a precompiled database of virus sequences from NCBI for which the baits are to be designed. Create the database using NCBI_retreive_database.py script. Change the directory path and database name accordingly.
 
 -------------------------------------------------------------------------------------------------------- 
 ### B) Exhaustive baits: 
