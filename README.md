@@ -34,15 +34,16 @@ Notes:
 'Directory': the initial files required for the designing and the output files are written  
 'Species Conserved baits fasta file': fasta file with designed conserved baits designed by option A. This is to make sure that the Species   consevered baits already designed are included.  
 'Query reference genomes in fasta': This file is a fasta file with all the genome sequences for which the baits are designed (.fa)   
-Each step generated a number of intermediate files and these are deleted in the final step   
 
-DesignMinimalBaits.py. Hence if you have any other file with the following terms they will be deleted.  json , finalbaits, Optimized, Blast, blast, Redesign, txt , Untar   
+Each step generated a number of intermediate files and these are deleted in the final step. 
+
 Output files:  
-*-All_BAITS.fa: Fasta file with all the baits sequences   
-*-All_BAITS-mapped.csv: File contains the information on where the baits map to each of the genome sequence used.   
-*-All_BAITS-untargeted.csv: Untargeted region of the genome where the adjacent baits are in a distance of more than 500bp apart from each other.  
- 
- 
+The script tries to find baits targeting the sequences in 3 iterations. Usually the iter3* are the files containing the designed baits. If there is no enough complexity in the number of sequences then the designed baits will be in iter2* or iter1*. Please make sure the iter*-untargeted.csv doesn't have many sequences. 
+
+iter*.fa: Fasta file with all the baits sequences   
+iter*-mapped.csv: File contains the information on where the baits map to each of the genome sequence used.   
+iter*-untargeted.csv: Untargeted region of the genome where the adjacent baits are in a distance of more than 500bp apart from each other. 
+
 ####  Requirements:
 1.  CD-HIT
 2.  blastn
