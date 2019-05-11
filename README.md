@@ -11,12 +11,13 @@ disRC = TRUE/FALSE "disable reverse complement function for '-'gRNA viruses"
 
 python runVirusDNA_NS.py dir dengue_virus virusDB 120 500 FALSE  
 
-# Requirements:
+####  Requirements:
  1. Primux   
  2. Vmatch
  3. NCBI blast commandline tool and database
- 4. Sqlite 
+ 4. Sqlite python
 
+virusDB is a precompiled database of virus sequences from NCBI for which the baits are to be designed. Create the database using NCBI_retreive_database.py script. Change the directory path and database name accordingly.
 
 -------------------------------------------------------------------------------------------------------- 
 ### B) Exhaustive baits: 
@@ -41,6 +42,10 @@ Output files:
 *-All_BAITS-mapped.csv: File contains the information on where the baits map to each of the genome sequence used.   
 *-All_BAITS-untargeted.csv: Untargeted region of the genome where the adjacent baits are in a distance of more than 500bp apart from each other.  
  
+ 
+####  Requirements:
+1.  CD-HIT
+2.  blastn
 
 -------------------------------------------------------------------------------------------------------- 
 ###  C) Analysis Pipeline    
