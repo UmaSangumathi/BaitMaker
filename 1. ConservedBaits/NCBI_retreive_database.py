@@ -40,8 +40,8 @@ con1 = None
 con1 = sqlite3.connect(hm_dir + '/VirusCapture.db')
 curi = con1.cursor()
 
-curi.execute("DROP TABLE IF EXISTS VirusData_4sp")
-curi.execute("CREATE TABLE VirusData_4sp(Species TEXT, Unique_ID INT Primary KEY, Primary_accession TEXT, Sequence_length INT, Other_Seq_id TEXT, Taxonomy TEXT,Source TEXT,Molecular_type TEXT,Comment TEXT, Host TEXT, Strain TEXT, Collection_Date TEXT, dbRef TEXT, Isolate TEXT, Country TEXT, Journal TEXT, Title TEXT, Sequence TEXT )")
+curi.execute("DROP TABLE IF EXISTS NCBI_DNA_records")
+curi.execute("CREATE TABLE NCBI_DNA_records(Species TEXT, Unique_ID INT Primary KEY, Primary_accession TEXT, Sequence_length INT, Other_Seq_id TEXT, Taxonomy TEXT,Source TEXT,Molecular_type TEXT,Comment TEXT, Host TEXT, Strain TEXT, Collection_Date TEXT, dbRef TEXT, Isolate TEXT, Country TEXT, Journal TEXT, Title TEXT, Sequence TEXT )")
 cur.execute("DROP TABLE IF EXISTS Hits")
 cur.execute("CREATE TABLE Hits (Virus TEXT PRIMARY KEY, hitGrt1000 INT, hitsGrt100 INT, ReferenceGenome TEXT, UniqueID TEXT)")
 
@@ -155,7 +155,7 @@ def sort_by_seqlen(search_word, virus):				# Retrieve all the records and sort i
 
 	info_list.append(record[0]["GBSeq_sequence"])
 	print "insert table:", v_id
-	curi.execute("INSERT or REPLACE INTO NCBI_records VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", info_list)
+	curi.execute("INSERT or REPLACE INTO NCBI_DNA_records VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", info_list)
 	con1.commit()
         Ref_genome_id = [e for e in other_seq if e.startswith('ref|N') or e.startswith('ref|A')]
         if len(Ref_genome_id) > 0:
@@ -191,7 +191,7 @@ Ref_genome_id = []
 genome_dict = {}
 for virus in [ 'Dengue virus 1', 'Dengue virus 2', 'Dengue virus 3', 'Dengue virus 4']:
 #    virus = virus.replace('\"','')
-    curi.execute("Select Species from NCBI_records WHERE Species=?", (virus,))
+    curi.execute("Select Species from NCBI_DNA_records WHERE Species=?", (virus,))
     Vir = curi.fetchall()
 #    print Vir
     if len(Vir)!=1: 
