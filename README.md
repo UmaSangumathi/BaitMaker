@@ -11,6 +11,13 @@ disRC = TRUE/FALSE "disable reverse complement function for '-'gRNA viruses"
 
 python runVirusDNA_NS.py dir dengue_virus virusDB 120 500 FALSE  
 
+# Requirements:
+ 1. Primux   
+ 2. Vmatch
+ 3. NCBI blast commandline tool and database
+ 4. Sqlite 
+
+
 -------------------------------------------------------------------------------------------------------- 
 ### B) Exhaustive baits: 
  
